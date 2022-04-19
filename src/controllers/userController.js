@@ -169,6 +169,7 @@ const loginUser = async function (req, res) {
                 return res.status(404).send({ status: false, msg: "password is not matched" })
             }
         }
+         return res.status(404).send({status: false, msg: "email not found"})
 
     }
     catch (error) {
