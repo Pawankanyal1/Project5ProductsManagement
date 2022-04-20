@@ -39,7 +39,7 @@ let authorization = async function (req, res, next) {
         let userId = req.params.userId
 
         if (!isValidObjectId(userId)) {
-           return res.status(400).send({ status: false, msg: " bookId is not a valid ObjectId" })
+           return res.status(400).send({ status: false, msg: " userId is not a valid ObjectId" })
         }
         let token = req.header("Authorization").split(' ')[1]
         let decodedToken = jwt.verify(token, "RoomNo-14")
